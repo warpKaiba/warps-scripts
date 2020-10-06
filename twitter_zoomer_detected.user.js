@@ -2,10 +2,10 @@
 // @name         Twitter_Zoomer_Detected
 // @namespace    http://tampermonkey.net/
 // @downloadURL  https://github.com/warpKaiba/warps-scripts/raw/master/twitter_zoomer_detected.user.js
-// @version      1.0
+// @version      1.1
 // @description  highlights minors in your followers list
 // @author       warpKaiba
-// @include      https://twitter.com/*/followers
+// @include      /^https:\/\/twitter\.com\/.*\/followers$/
 // @grant        none
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==
@@ -36,20 +36,25 @@
 
             if (textContent.match(/([^A-z]|^)minor([^A-z]|$)/ig)) { //looks for 'minor' not part of another word, (eg not "minority" or "minors")
                 //users[i].parentNode.parentNode.parentNode.style = "background:rgb(150, 20, 20)!important;";
-                users[i].firstChild.style = "background:rgb(150, 20, 20)!important;";
+                users[i].firstChild.style = "background:rgb(100, 20, 20)!important;";
                 continue;
             }
 
-            var numbers = textContent.replaceAll(/\d{1,4}(\||\/|\.|\\|-|\s)\d{1,4}(\||\/|\.|\\|-|\s)\d{1,4}/g, "date_Was_Here").match(/(\D1\d$|^1\d\D|\D1\d\D)/)
-            //console.log(numbers);
+            var numbers = textContent.replaceAll(/\d{1,4}(\||\/|\.|\\|-|\s)\d{1,4}(\||\/|\.|\\|-|\s)\d{1,4}/g, "date_Was_Here")
+            var array1 = Array.from(numbers.matchAll(/\D1\d\D/g), m => m[0])
+            var array2 = Array.from(numbers.matchAll(/^1\d\D/g), m => m[0])
+            var array3 = Array.from(numbers.matchAll(/\D1\d$/g), m => m[0])
+            var array = array1.concat(array2).concat(array3)
+
             if (numbers != undefined) {
 
-                for (var j = 0; j < numbers.length; j++) {
-                    if (numbers[j].replaceAll(/[^0-9]/g, "") < 18) {
+                for (var j = 0; j < array.length; j++) {
+                    if (array[j].replaceAll(/[^0-9]/g, "") < 18) {
                         //console.log(numbers[j].slice(1,3));
                         //console.log(textContent.replaceAll(/\d{1,4}(\||\/|\.|\\|-|\s)\d{1,4}(\||\/|\.|\\|-|\s)\d{1,4}/g, "date_Was_Here"))
                         //users[i].parentNode.parentNode.parentNode.style = "background:rgb(50, 20, 20)!important;";
-                        users[i].firstChild.style = "background:rgb(70, 20, 20)!important;";
+                        users[i].firstChild.style = "background:rgb(100, 20, 20)!important;";
+                        //users[i].textContent += numbers[j]
                         continue;
                     }
                 }

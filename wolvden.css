@@ -1,0 +1,44 @@
+@font-face {
+  font-family: aura;
+  src: url(https://mileshouse.neocities.org/pixbit/AURA-REGULAR.OTF);
+}
+
+html {
+ filter:invert(1)!important;
+ font-family: aura
+}
+
+img {
+  filter:invert(1)!important;
+  border: 20px solid transparent;
+  border-image: url(https://pluspng.com/img-png/fire-png--983.png) 20% stretch;
+  scale: 1.3;
+  padding: 0;
+}
+body{
+  background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnewcastlebeach.org%2Fimages%2Ftransparent-fire-gif-1.gif&f=1&nofb=1)
+}
+
+a {
+  box-shadow: #8ff 5px 5px 5px;
+  text-shadow: #3ff 0px -9px 6px, #3af 0px -5px 4px, #33f 0px -2px 2px;
+  color: blue;
+}
+
+#header .navbar-main .navbar-brand {
+	width: 255px;
+	height: 105px;
+	filter: invert(1);
+  background-color: white;
+  margin: 40px;
+  padding: 40px;
+}
+
+#header .navbar-main .nav-link .fa {
+  color: #6ff;
+}
+
+#header .navbar-main .active .nav-link, #header .navbar-main .active .nav-link .fa, #header .navbar-main .nav-link:hover, #header .navbar-main .nav-link:hover .fa {
+    color: aqua;
+    font-size: 30pt;
+}

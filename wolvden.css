@@ -1,44 +1,108 @@
-@font-face {
-  font-family: aura;
-  src: url(https://mileshouse.neocities.org/pixbit/AURA-REGULAR.OTF);
-}
-
-html {
- filter:invert(1)!important;
- font-family: aura
+div {
+  font-family: Times New Roman;
 }
 
 img {
-  filter:invert(1)!important;
   border: 20px solid transparent;
   border-image: url(https://pluspng.com/img-png/fire-png--983.png) 20% stretch;
   scale: 1.3;
   padding: 0;
 }
+
 body{
   background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnewcastlebeach.org%2Fimages%2Ftransparent-fire-gif-1.gif&f=1&nofb=1)
 }
 
 a {
-  box-shadow: #8ff 5px 5px 5px;
-  text-shadow: #3ff 0px -9px 6px, #3af 0px -5px 4px, #33f 0px -2px 2px;
-  color: blue;
+  box-shadow: #400 5px 5px 5px;
+  text-shadow: #f33 0px -9px 6px, #fa3 0px -5px 4px, #ff3 0px -2px 2px;
+  color: yellow!important;
+}
+
+#header .navbar-main {
+    position: relative;
+    background-image: url(http://www.bellsnwhistles.com/6bg/bg267.gif);
+    background-color: #252525;
+    min-height: 56px;
 }
 
 #header .navbar-main .navbar-brand {
 	width: 255px;
 	height: 105px;
-	filter: invert(1);
   background-color: white;
   margin: 40px;
   padding: 40px;
 }
 
 #header .navbar-main .nav-link .fa {
-  color: #6ff;
+  color: #900;
 }
 
 #header .navbar-main .active .nav-link, #header .navbar-main .active .nav-link .fa, #header .navbar-main .nav-link:hover, #header .navbar-main .nav-link:hover .fa {
-    color: aqua;
+    color: red;
     font-size: 30pt;
+}
+
+#header .breadcrumb-nav {
+  background-image: url(http://cdn.lowgif.com/small/f813e333dadd2bfa-matrix-gif-find-share-on-giphy.gif)
+}
+
+.breadcrumb-item {
+  font-size: 30px;
+}
+
+.breadcrumb-item.active {
+  font-size: 50px;
+  color: red;
+  text-shadow: #900 0px -4px 0px, #900 -3px -5px 0px, #200 0px 2px 0px;
+}
+
+.progress-bar {
+  background-image:url(https://i.pinimg.com/originals/f3/ff/b2/f3ffb2d584f09068aee6e9360dc13b34.jpg)!important;
+  background-size: 32px;
+  background-position-y: 40px;
+}
+
+#main {
+  background:black;
+}
+
+#sidebar {
+  background:url(http://s3.amazonaws.com/image.blingee.com/images16/content/output/000/000/000/02d/444860315_364773.gif?4)
+}
+
+.card {
+  background:#400;
+  border-bottom: 8px solid #000!important;
+}
+
+body {
+  color:red;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #505050;
+    background-color: #500;
+    border: grey outset 10px
+}
+
+#header .navbar-status {
+    background-image: url(https://i.pinimg.com/originals/f3/ff/b2/f3ffb2d584f09068aee6e9360dc13b34.jpg);
+  background-position-y: 90px;
+    color: #fff;
+    height: 64px;
+}
+
+
+.table-striped tbody tr:nth-of-type(4n+1) {
+    background-color: black;
+}
+.table-striped tbody tr:nth-of-type(4n+2) {
+    background-color: #333;
+}
+.table-striped tbody tr:nth-of-type(4n+3) {
+    background-color: #300;
+}
+.table-striped tbody tr:nth-of-type(4n+4) {
+    background-color: #400;
 }

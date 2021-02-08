@@ -2,10 +2,10 @@
 // @name         Twitter_Zoomer_Detected
 // @namespace    http://tampermonkey.net/
 // @downloadURL  https://github.com/warpKaiba/warps-scripts/raw/master/twitter_zoomer_detected.user.js
-// @version      1.1
+// @version      1.2
 // @description  highlights minors in your followers list
 // @author       warpKaiba
-// @include      /^https:\/\/twitter\.com\/.*\/followers$/
+// @match        https://*twitter.com/*/followers
 // @grant        none
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==

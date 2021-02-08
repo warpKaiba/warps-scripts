@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Twitter_Zoomer_Detected
+// @name         Twitter Minor Detector
 // @namespace    http://tampermonkey.net/
 // @downloadURL  https://github.com/warpKaiba/warps-scripts/raw/master/twitter_zoomer_detected.user.js
-// @version      1.2
+// @version      1.3
 // @description  highlights minors in your followers list
 // @author       warpKaiba
-// @match        https://*twitter.com/*/followers
+// @match        *twitter.com/*/followers*
 // @grant        none
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==

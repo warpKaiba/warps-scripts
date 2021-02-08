@@ -26,3 +26,8 @@ If it doesn't find that, it looks for an age. This is exactly what it looks for,
 (Non-number, or nothing) (The number 1) (Any number) (Non-number, or nothing)
 
 If anything that matches this pattern is found and is less than 18, it turns the user red.
+
+### How to install
+It's a browser userscript so you'll need an extension like Tampermonkey or Greasemonkey and then click this
+https://github.com/warpKaiba/warps-scripts/raw/master/twitter_zoomer_detected.user.js
+Your extension will ask if you want to load it and you'll get a chance to look the code over if you want.

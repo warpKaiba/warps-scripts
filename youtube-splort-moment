@@ -1,0 +1,23 @@
+var heatMarkers= ytInitialData.playerOverlays.playerOverlayRenderer.decoratedPlayerBarRenderer.decoratedPlayerBarRenderer.playerBar.multiMarkersPlayerBarRenderer.markersMap[0].value.heatmap.heatmapRenderer.heatMarkers
+
+for (i in heatMarkers) {
+var daHeat = heatMarkers[i].heatMarkerRenderer.heatMarkerIntensityScoreNormalized;
+if (daHeat == 1) {
+    var daHottest = heatMarkers[i].heatMarkerRenderer.timeRangeStartMillis;
+}
+daLast = heatMarkers[i].heatMarkerRenderer.timeRangeStartMillis;
+}
+
+var heatmap = document.querySelector(".ytp-heat-map-container")
+var splort = document.createElement("div")
+splort.style="background: url(https://i.imgur.com/btMvkPg.png) no-repeat;background-size:contain;animation:splorto 0.4s;animation-iteration-count:infinite;height: 50px;color: white;font-weight: bold;left: calc("+((daHottest/daLast)*100)+"% + 1%);display: block;position: relative;"
+splort.className="splort"
+splort.textContent = "⬅️SPLORT MOMENT!!!"
+var style = document.createElement("style")
+style.type = "text/css"
+style.innerHTML = `@keyframes splorto {
+0% {font-size:8pt}
+50% {font-size:13pt}
+}`
+document.querySelector("head").appendChild(style);
+heatmap.appendChild(splort);
